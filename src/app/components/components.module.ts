@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameCardComponent } from './game-card/game-card.component';
-import { MainBannerComponent } from './main-banner/main-banner.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  declarations: [GameCardComponent, MainBannerComponent],
+  declarations: [GameCardComponent, CarouselComponent],
   imports: [CommonModule],
-  exports: [GameCardComponent, MainBannerComponent, CommonModule],
+  exports: [GameCardComponent, CarouselComponent, CommonModule],
 })
 export class ComponentsModule {}

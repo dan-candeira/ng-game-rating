@@ -1,0 +1,86 @@
+.main-banner {
+	--sm-space: 1rem;
+	--md-space: 2rem;
+
+	--size: 100vw;
+	--gap: var(--md-space);
+
+
+	display: flex;
+	overflow-x: auto;
+  padding: 0;
+  list-style: none;
+
+	img {
+		max-width: none;
+	}
+
+
+	@supports(display: grid) {
+
+		display: grid;
+		grid-auto-flow: column;
+		gap: var(--gap);
+	}
+
+	padding-inline-start: var(--gap);
+  padding-inline-end: var(--gap);
+  padding-block-start: calc(var(--gap) / 2);
+  padding-block-end: calc(var(--gap) / 2);
+
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-left: var(--gap);
+  scroll-padding-right: calc(var(--gap) - 0.5);
+  scroll-padding-inline: var(--gap);
+
+	@media (prefers-reduced-data: reduce) {
+    min-inline-size: var(--size);
+
+    img {
+      display: none;
+    }
+  }
+
+   img {
+    inline-size: var(--size);
+    block-size: 50vh;
+  }
+
+
+	@supports (aspect-ratio: 1) {
+    img {
+      inline-size: auto;
+      // aspect-ratio: 16/9;
+      aspect-ratio: 2 / 1;
+    }
+  }
+}
+
+.carousel__buttons {
+  display: flex;
+  justify-content: center;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+
+  > button {
+    background-color: cornflowerblue;
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    transform: scale(.8);
+    transition: transform .25s ease-out;
+
+    border-radius: 50%;
+
+    border: none;
+
+    &[data-carousel-current] {
+      background-color: crimson;
+      transform: scale(1);
+    }
+  }
+}
