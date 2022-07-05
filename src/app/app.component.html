@@ -1,0 +1,44 @@
+<a href="#main-content" class="skip-links">Ir para conteúdo</a>
+
+<header class="header">
+  <div class="[ navigation ] [ wrapper ]">
+    <a routerLink="/" aria-label="Homepage" class="logo">Logo</a>
+
+    <div class="search">
+      <form>
+        <label for="search-bar">
+          <!-- accessible name for screen readers -->
+          <span class="visually-hidden">Find games</span>
+          <input
+            type="text"
+            id="search-bar"
+            name="game-search"
+            [ngModel]="search$ | async"
+            (ngModelChange)="search$.next($event)"
+          />
+        </label>
+
+        <button type="submit">
+          <span class="visually-hidden"> Search </span>
+          <!-- svg icon goes here -->
+        </button>
+      </form>
+    </div>
+
+    <a routerLink="/login">
+      <span class="visually-hidden"> Login </span>
+      <!-- svg icon goes here -->
+    </a>
+  </div>
+</header>
+
+<main tabindex="-1" id="main-content">
+  <router-outlet></router-outlet>
+</main>
+<footer class="wrapper">
+  <a href="#"><span class="visually-hidden">Facebook</span></a>
+  <a href="#"><span class="visually-hidden">Twitter</span></a>
+  <a href="#"><span class="visually-hidden">Google plus</span></a>
+  <a href="#"><span class="visually-hidden">Youtube</span></a>
+  <a href="#"><span class="visually-hidden">Instagram</span></a>
+</footer>
