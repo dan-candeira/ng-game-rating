@@ -39,7 +39,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
       // Ideally i should check which item is on view to update the buttons
       // but for time constraints i will not do it
       if (isDefaultImage) {
-        el.scrollIntoView({ inline: 'center' });
+        el.scrollIntoView({ inline: 'center', block: 'nearest' });
       }
     });
 
@@ -82,7 +82,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
     );
 
     child?.querySelector('a')?.focus();
-    child?.scrollIntoView({ inline: 'center' });
+    child?.scrollIntoView({ inline: 'center', block: 'nearest' });
 
     (e.target as HTMLElement).setAttribute('data-carousel-current', '');
   }

@@ -6,3 +6,17 @@
 main {
   margin-top: 2rem;
 }
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+app-root {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  min-height: 100vh;
+}

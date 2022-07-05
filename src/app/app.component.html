@@ -1,4 +1,4 @@
-<a href="#main-content" class="skip-links">Ir para conteúdo</a>
+<a href="#main-content" class="skip-link">Ir para conteúdo</a>
 
 <header class="header">
   <div class="[ navigation ] [ wrapper ]">
@@ -20,14 +20,40 @@
 
         <button type="submit">
           <span class="visually-hidden"> Search </span>
-          <!-- svg icon goes here -->
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 13"
+          >
+            <path
+              fill="currentColor"
+              d="M13.144 11.875 9.267 7.997a5.014 5.014 0 0 0 .96-2.956A5.047 5.047 0 0 0 5.184 0 5.047 5.047 0 0 0 .144 5.041a5.047 5.047 0 0 0 5.041 5.041 5.015 5.015 0 0 0 2.956-.96L12.019 13l1.125-1.125ZM5.185 8.49a3.45 3.45 0 1 1 0-6.898 3.45 3.45 0 0 1 0 6.898Z"
+            />
+          </svg>
         </button>
       </form>
     </div>
 
     <a routerLink="/login">
       <span class="visually-hidden"> Login </span>
-      <!-- svg icon goes here -->
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 45 45"
+      >
+        <path
+          fill="#6EA8FE"
+          d="M0 22.5C0 10.074 10.074 0 22.5 0S45 10.074 45 22.5 34.926 45 22.5 45 0 34.926 0 22.5Z"
+        />
+        <path
+          fill="#FDFDFD"
+          d="M22.5 22.5a4.577 4.577 0 1 0 0-9.154 4.577 4.577 0 0 0 0 9.154Zm0 1.308c-2.837 0-8.5 1.752-8.5 5.23v2.616h17v-2.616c0-3.478-5.663-5.23-8.5-5.23Z"
+        />
+      </svg>
     </a>
   </div>
 </header>
@@ -35,10 +61,96 @@
 <main tabindex="-1" id="main-content">
   <router-outlet></router-outlet>
 </main>
-<footer class="wrapper">
-  <a href="#"><span class="visually-hidden">Facebook</span></a>
-  <a href="#"><span class="visually-hidden">Twitter</span></a>
-  <a href="#"><span class="visually-hidden">Google plus</span></a>
-  <a href="#"><span class="visually-hidden">Youtube</span></a>
-  <a href="#"><span class="visually-hidden">Instagram</span></a>
+<footer class="footer">
+  <ul class="flow-space-500">
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Facebook</span>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 448 446"
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M448 224C448 100.3 347.7 0 224 0S0 100.3 0 224c0 111.8 81.9 204.47 189 221.29V288.77h-56.89V224H189v-49.35c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38V147H295.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H259v156.54C366.1 428.5 448 335.83 448 224Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Twitter</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          fill="none"
+          viewBox="0 0 480 384"
+        >
+          <path
+            fill="currentColor"
+            d="M480 45.5a201.796 201.796 0 0 1-56.55 15.3 97.51 97.51 0 0 0 43.33-53.6 197.736 197.736 0 0 1-62.56 23.5A99.14 99.14 0 0 0 332.31 0c-54.42 0-98.46 43.4-98.46 96.9a93.179 93.179 0 0 0 2.54 22.1 280.69 280.69 0 0 1-203-101.3A95.69 95.69 0 0 0 20 66.4c0 33.6 17.53 63.3 44 80.7A97.498 97.498 0 0 1 19.22 135v1.2c0 47 34 86.1 79 95a100.743 100.743 0 0 1-25.94 3.4 94.36 94.36 0 0 1-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.587 199.587 0 0 1 23.5 341.6 202.82 202.82 0 0 1 0 340.2 278.676 278.676 0 0 0 150.74 384c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.479 198.479 0 0 0 480 45.5Z"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Google plus</span>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="4.204 4.109 126.251 123.426"
+        >
+          <path
+            fill="currentColor"
+            d="M126.515 4.109H8.144a3.938 3.938 0 0 0-3.94 3.938v115.546a3.94 3.94 0 0 0 3.94 3.942h118.371a3.939 3.939 0 0 0 3.939-3.942V8.048a3.938 3.938 0 0 0-3.939-3.939z"
+          />
+          <path
+            fill="white"
+            d="m70.479 71.844-3.983-3.093c-1.213-1.006-2.872-2.334-2.872-4.765 0-2.441 1.659-3.993 3.1-5.43 4.64-3.652 9.275-7.539 9.275-15.73 0-8.423-5.3-12.854-7.84-14.956h6.85l7.188-4.517H60.418c-5.976 0-14.588 1.414-20.893 6.619-4.752 4.1-7.07 9.753-7.07 14.842 0 8.639 6.633 17.396 18.347 17.396 1.105 0 2.315-.108 3.533-.222-.547 1.331-1.1 2.438-1.1 4.32 0 3.431 1.763 5.534 3.317 7.527-4.978.342-14.269.894-21.117 5.104-6.523 3.879-8.508 9.524-8.508 13.51 0 8.202 7.73 15.842 23.762 15.842 19.01 0 29.074-10.519 29.074-20.932.001-7.65-4.419-11.416-9.284-15.515zM56 59.107c-9.51 0-13.817-12.294-13.817-19.712 0-2.889.547-5.87 2.428-8.199 1.773-2.218 4.861-3.657 7.744-3.657 9.168 0 13.923 12.404 13.923 20.382 0 1.996-.22 5.533-2.762 8.09-1.779 1.774-4.754 3.096-7.516 3.096zm.109 44.543c-11.826 0-19.452-5.657-19.452-13.523 0-7.864 7.071-10.523 9.504-11.404 4.641-1.562 10.611-1.779 11.607-1.779 1.104 0 1.658 0 2.538.11 8.406 5.983 12.056 8.966 12.056 14.63 0 6.858-5.639 11.966-16.253 11.966zm42.284-44.712V47.863h-5.47v11.075H81.866v5.531h11.057v11.143h5.47V64.469h11.113v-5.531z"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Youtube</span>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 512 385"
+        >
+          <path
+            fill="currentColor"
+            d="M508.646 84.79c0-45-33.1-81.2-74-81.2C379.246 1 322.746 0 265.006 0h-18c-57.6 0-114.2 1-169.6 3.6-40.8 0-73.9 36.4-73.9 81.4-2.5 35.59-3.56 71.19-3.5 106.79-.1 35.6 1.033 71.233 3.4 106.9 0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8 60.8.2 120.333-1.067 178.6-3.8 40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107 .227-35.6-.86-71.233-3.26-106.9Zm-301.64 205.1V93.39l145 98.2-145 98.3Z"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Instagram</span>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+        >
+          <path
+            fill="currentColor"
+            d="M160 128a32 32 0 1 1-32-32 32.037 32.037 0 0 1 32 32Zm68-44v88a56.064 56.064 0 0 1-56 56H84a56.064 56.064 0 0 1-56-56V84a56.064 56.064 0 0 1 56-56h88a56.064 56.064 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48 48.054 48.054 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12 12 12 0 0 0 12-12Z"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
 </footer>

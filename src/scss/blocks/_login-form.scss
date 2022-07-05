@@ -1,0 +1,26 @@
+.login {
+  --gap: 2rem;
+
+  &__container {
+    background-color: azure;
+
+    max-width: 40rem;
+
+    margin: var(--gap) auto;
+    margin-inline: auto;
+
+    padding: var(--gap);
+    padding-block: var(--gap);
+  }
+
+  &__content {
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      height: var(--gap);
+    }
+  }
+}

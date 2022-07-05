@@ -1,0 +1,22 @@
+$flow-base: 1rem;
+
+$flow-spaces: (
+  '300': $flow-base * 0.75,
+  '400': $flow-base * 1,
+  '500': $flow-base * 1.25,
+  '600': $flow-base * 1.50,
+  '700': $flow-base * 1.75,
+  '800': $flow-base * 2,
+  '900': $flow-base * 2.25,
+);
+
+
+.flow-space {
+  > * + * {
+    margin-top: var(--flow-space);
+  }
+}
+
+@each $space, $value in $flow-spaces {
+  .flow-space-#{$space} { --flow-space: #{$value}; }
+}

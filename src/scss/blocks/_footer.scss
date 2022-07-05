@@ -1,0 +1,33 @@
+.footer {
+  ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    > * + * {
+      margin-left: var(--flow-space);
+      margin-inline-start: var(--flow-space);
+    }
+
+    svg {
+      height: 1.5rem;
+    }
+
+    li:first-of-type {
+      svg {
+        height: 1.8rem;
+      }
+    }
+
+    li:last-of-type {
+      margin-right: var(--flow-space);
+      margin-inline-end: var(--flow-space);
+
+      svg {
+        height: 2rem;
+      }
+    }
+  }
+}
