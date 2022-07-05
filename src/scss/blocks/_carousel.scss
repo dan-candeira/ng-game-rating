@@ -1,4 +1,4 @@
-.main-banner {
+.carousel {
 	--sm-space: 1rem;
 	--md-space: 2rem;
 
@@ -55,32 +55,33 @@
       aspect-ratio: 2 / 1;
     }
   }
-}
 
-.carousel__buttons {
-  display: flex;
-  justify-content: center;
 
-  > * + * {
-    margin-left: 1rem;
-  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
 
-  > button {
-    background-color: cornflowerblue;
+    > * + * {
+      margin-left: 1rem;
+    }
 
-    width: 1.2rem;
-    height: 1.2rem;
+    > button {
+      background-color: cornflowerblue;
 
-    transform: scale(.8);
-    transition: transform .25s ease-out;
+      width: 1.2rem;
+      height: 1.2rem;
 
-    border-radius: 50%;
+      transform: scale(.8);
+      transition: transform .25s ease-out;
 
-    border: none;
+      border-radius: 50%;
 
-    &[data-carousel-current] {
-      background-color: crimson;
-      transform: scale(1);
+      border: none;
+
+      &[data-carousel-current] {
+        background-color: crimson;
+        transform: scale(1);
+      }
     }
   }
 }

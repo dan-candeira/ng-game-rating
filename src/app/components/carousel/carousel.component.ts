@@ -81,8 +81,8 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
       button.removeAttribute('data-carousel-current')
     );
 
-    child?.scrollIntoView({ inline: 'center' });
     child?.querySelector('a')?.focus();
+    child?.scrollIntoView({ inline: 'center' });
 
     (e.target as HTMLElement).setAttribute('data-carousel-current', '');
   }
