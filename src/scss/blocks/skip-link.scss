@@ -5,6 +5,12 @@
   top: 1rem;
   left: 1rem;
 
+  background-color: white;
+
+  padding: 0.5rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+
   // @exteds should be used with care, but this is a great example of them being hella useful
   &:not(:focus) {
     @extend .visually-hidden;

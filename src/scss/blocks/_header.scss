@@ -1,8 +1,36 @@
 .header {
-  margin-top: 1.5rem;
+  padding: 1.5rem 0;
+  padding-block: 1.5rem;
+  background-color: hsl(0, 97%, 63%);
 
   .navigation {
     display: flex;
     justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    > * {
+      flex-basis: 5ch;
+    }
+  }
+
+  a:first-of-type {
+    color: white;
+
+    svg {
+      width: 3rem;
+    }
+  }
+
+  a:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 84%, 25%);
+
+    svg {
+      width: 2.5rem;
+    }
   }
 }

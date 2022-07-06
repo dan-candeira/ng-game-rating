@@ -1,12 +1,12 @@
 <div class="game-card__image">
-  <img src="" alt="" />
+  <img [src]="image || defaultImage" alt="" loading="lazy" />
 </div>
 <div class="game-card__text">
   <h2>
-    <a href="#">My awesome game</a>
+    <a [routerLink]="['game', gameId]">{{ title }}</a>
   </h2>
   <small>
-    <span class="visually-hidden">7 out of 10</span>
-    <span aria-hidden="true">7/10</span>
+    <span class="visually-hidden">{{ rating }} out of 10</span>
+    <span aria-hidden="true">{{ rating }} / 10</span>
   </small>
 </div>

@@ -1,18 +1,24 @@
 <!-- Making a more generic component enable more customization -->
-<ul carousel aria-label="Featured games">
-  <li>
-    <a href="#"><img src="https://via.placeholder.com/1920x1080" alt="" /></a>
-  </li>
-  <li data-carousel-default="">
-    <a href="#"><img src="https://via.placeholder.com/1920x1080" alt="" /></a>
-  </li>
-  <li>
-    <a href="#"><img src="https://via.placeholder.com/1920x1080" alt="" /></a>
+<ul carousel aria-label="Featured games" role="list">
+  <li *ngFor="let game of featured; let i = index">
+    <a
+      [routerLink]="['game', game?.id]"
+      [attr.aria-label]="game?.title"
+      [attr.data-carousel-default]="i == 2"
+      ><img [src]="game?.photo" alt=""
+    /></a>
   </li>
 </ul>
 
 <section class="wrapper">
-  <ul class="game-list">
-    <li *ngFor="let game of [1, 2, 3, 4]" game-card></li>
+  <ul class="game-list" role="list">
+    <li
+      *ngFor="let game of games$ | async"
+      game-card
+      [gameId]="game?.id"
+      [title]="game?.title"
+      [image]="game?.photo"
+      [rating]="game?.rating"
+    ></li>
   </ul>
 </section>

@@ -6,6 +6,7 @@ import {
   ChangeDetectorRef,
   OnDestroy,
 } from '@angular/core';
+import { BehaviorSubject, Subscriber, Subscription } from 'rxjs';
 
 @Component({
   selector: '[carousel]',
@@ -13,14 +14,24 @@ import {
   host: { class: 'carousel' },
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
-  childrenArray: Array<HTMLElement> | null = null;
+  childrenArray: Array<any> | null = null;
   buttonsArray: Array<HTMLElement> = [];
+  children$ = new BehaviorSubject<Array<HTMLElement> | null>(null);
+  subscription: any | null = null;
 
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
     private cd: ChangeDetectorRef
-  ) {}
+  ) {
+    this.subscription = this.children$.subscribe((children: any) => {
+      if (!children) {
+        return;
+      }
+
+      this.childrenArray = Array.from(children) as Array<any>;
+    });
+  }
 
   ngAfterViewInit(): void {
     this.setupChildren();
@@ -28,11 +39,11 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
   setupChildren(): void {
     const children = this.element?.nativeElement?.children;
-    this.childrenArray = Array.from(children) as Array<HTMLElement>;
-    this.cd.detectChanges();
+    this.children$.next(this.element?.nativeElement?.children);
 
     this.childrenArray?.forEach((el: HTMLElement, index) => {
-      const isDefaultImage = el?.getAttribute('data-carousel-default') == '';
+      const isDefaultImage =
+        el?.getAttribute('data-carousel-default') == 'true';
 
       el?.setAttribute('data-carousel-id', String(index + 1));
 
@@ -57,7 +68,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
 
     this.childrenArray?.forEach((child, index) => {
       const button = this.renderer.createElement('button') as HTMLElement;
-      const isCurrent = child.getAttribute('data-carousel-default') == '';
+      const isCurrent = child.getAttribute('data-carousel-default') == 'true';
 
       if (isCurrent) {
         button.setAttribute('data-carousel-current', '');

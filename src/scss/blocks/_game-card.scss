@@ -4,15 +4,24 @@
 
   position: relative;
 
+  background-color: white;
+
   &__image {
     height: 15rem;
+
     > img {
-      background-color: cornflowerblue;
       height: 100%;
+      width: 100%;
+      object-fit: cover;
+      background-position: center center;
     }
   }
 
   &__text {
+    padding: 0.3rem 1rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
     a::after {
       height: 100%;
       background-color: transparent;
@@ -32,6 +41,19 @@
       inset: 0;
 
       z-index: 1;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    small {
+      padding: 0.3rem;
+      border-radius: 3px;
+
+      background-color: rgb(39, 85, 169);
+      color: white;
+      font-weight: 500;
     }
   }
 }

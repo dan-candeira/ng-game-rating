@@ -1,0 +1,39 @@
+.game-details {
+  display: flex;
+  color: white;
+
+  > * + * {
+    margin-left: 2rem;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+    gap: 2rem;
+
+    > * + * {
+      margin-left: initial;
+      margin-inline: initial;
+    }
+  }
+
+  dl {
+    dt + * {
+      margin-top: 0.3rem;
+      margin-block-start: 0.3rem;
+    }
+
+    dt {
+      margin-top: 1rem;
+      margin-block-start: 1rem;
+
+      font-weight: 700;
+    }
+  }
+}
+
+.game-details + * {
+  color: white;
+  margin: 2rem 0;
+  margin-block: 2rem;
+}

@@ -1,7 +1,5 @@
 .footer {
   ul {
-    list-style: none;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -9,6 +7,11 @@
     > * + * {
       margin-left: var(--flow-space);
       margin-inline-start: var(--flow-space);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
     }
 
     svg {

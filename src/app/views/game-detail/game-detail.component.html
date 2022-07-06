@@ -1,0 +1,45 @@
+<ng-container *ngIf="gameDetail$ | async as gameDetails; else noData">
+  <section class="[ game-details ] [ wrapper ]">
+    <div>
+      <img [src]="gameDetails.photos[0].url" alt="" />
+    </div>
+    <article>
+      <div>
+        <small>{{ gameDetails?.rating }}</small>
+        <h1>{{ gameDetails?.title }}</h1>
+      </div>
+
+      <dl>
+        <dt>Genre</dt>
+        <dd>{{ gameDetails?.genres || "No genres found." }}</dd>
+
+        <dt>Studio</dt>
+        <dd>{{ gameDetails?.studio || "No studio found." }}</dd>
+
+        <dt>Productor</dt>
+        <dd>{{ gameDetails?.productor || "No productor found." }}</dd>
+
+        <dt>Total votes</dt>
+        <dd>{{ gameDetails?.totalVotes || 0 }}</dd>
+
+        <dt>Company</dt>
+        <dd>{{ gameDetails?.company || "No company found." }}</dd>
+
+        <dt>Platforms</dt>
+        <dd>{{ gameDetails?.platforms || "No platforms found." }}</dd>
+
+        <dt>Tags</dt>
+        <dd>{{ gameDetails?.tags || "No tags found." }}</dd>
+      </dl>
+    </article>
+  </section>
+
+  <div class="wrapper">
+    <h2>Description</h2>
+    <p>{{ gameDetails?.description || "There is no description." }}</p>
+  </div>
+</ng-container>
+
+<ng-template #noData>
+  <p>No content found.</p>
+</ng-template>

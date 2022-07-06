@@ -1,8 +1,7 @@
 .search {
-
   form {
     display: flex;
-    border: 2px solid cornflowerblue;
+    background-color: white;
     border-radius: 2rem;
 
     padding: 0.25rem 1rem;
@@ -28,8 +27,9 @@
     border: none;
     border-radius: 50%;
 
-    background-color: cornflowerblue;
-    color: white;
+    border: 3px dotted hsl(0, 84%, 25%);
+    color: hsl(0, 84%, 25%);
+    background-color: transparent;
   }
 
   svg {

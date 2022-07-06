@@ -1,29 +1,25 @@
 .carousel {
-	--sm-space: 1rem;
-	--md-space: 2rem;
+  --sm-space: 1rem;
+  --md-space: 2rem;
 
-	--size: 100vw;
-	--gap: var(--md-space);
+  --size: 100vw;
+  --gap: var(--md-space);
 
-
-	display: flex;
-	overflow-x: auto;
+  display: flex;
+  overflow-x: auto;
   padding: 0;
-  list-style: none;
 
-	img {
-		max-width: none;
-	}
+  img {
+    max-width: none;
+  }
 
+  @supports (display: grid) {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--gap);
+  }
 
-	@supports(display: grid) {
-
-		display: grid;
-		grid-auto-flow: column;
-		gap: var(--gap);
-	}
-
-	padding-inline-start: var(--gap);
+  padding-inline-start: var(--gap);
   padding-inline-end: var(--gap);
   padding-block-start: calc(var(--gap) / 2);
   padding-block-end: calc(var(--gap) / 2);
@@ -34,7 +30,7 @@
   scroll-padding-right: calc(var(--gap) - 0.5);
   scroll-padding-inline: var(--gap);
 
-	@media (prefers-reduced-data: reduce) {
+  @media (prefers-reduced-data: reduce) {
     min-inline-size: var(--size);
 
     img {
@@ -42,20 +38,17 @@
     }
   }
 
-   img {
+  img {
     inline-size: var(--size);
     block-size: 50vh;
   }
 
-
-	@supports (aspect-ratio: 1) {
+  @supports (aspect-ratio: 1) {
     img {
       inline-size: auto;
-      // aspect-ratio: 16/9;
-      aspect-ratio: 2 / 1;
+      aspect-ratio: 16/9;
     }
   }
-
 
   &__buttons {
     display: flex;
@@ -71,8 +64,8 @@
       width: 1.2rem;
       height: 1.2rem;
 
-      transform: scale(.8);
-      transition: transform .25s ease-out;
+      transform: scale(0.8);
+      transition: transform 0.25s ease-out;
 
       border-radius: 50%;
 
